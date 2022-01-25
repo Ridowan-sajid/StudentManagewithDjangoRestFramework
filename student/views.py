@@ -22,7 +22,7 @@ def student_create(request):
             json_data=JSONRenderer().render(response)
             return HttpResponse(json_data,content_type='application/json')
         else:
-            json_data = JSONRenderer().render(serializer.errors)
+            json_data = JSONRenderer().render(stud_seria.errors)
             return HttpResponse(json_data, content_type='application/json')
 
 def student_detail(request):
@@ -59,7 +59,7 @@ def student_update(request):
             json_data=JSONRenderer().render(response)
             return HttpResponse(json_data,content_type='application/json')
         else:
-            json_data = JSONRenderer().render(serializer.errors)
+            json_data = JSONRenderer().render(stud_seria.errors)
             return HttpResponse(json_data, content_type='application/json')
 
 @csrf_exempt
